@@ -1,3 +1,4 @@
+import math
 from convertir import numero_a_letras
 
 class CalculadoraNumeroTexto:
@@ -39,15 +40,5 @@ class CalculadoraNumeroTexto:
         texto = numero_a_letras(promedio)
         return promedio, texto, "promedio"
 
-
-
-
-
-
-
-
-
-#minimunn number
-#average    
-
-
+    def calcular_seno(self, otro_numero):
+        math.sin(otro_numero)
