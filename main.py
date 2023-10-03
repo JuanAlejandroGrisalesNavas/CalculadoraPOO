@@ -3,6 +3,9 @@ from convertir import *
 
 while True:
     try:
+        operacion = int(input("¿Qué operación deseas realizar?\n1. Suma\n2. Resta\n3. Multiplicación\n4. División\n5. Máximo\n6. Mínimo\n7. Promedio\n8. Seno\n9. Coseno\n10. Tangente\n11. Salir\n"))
+
+    
         numero1 = float(input("Ingresa el primer número: "))
         while True:
             signo1 = input("Ingresa el signo del primer número (+ o -): ")
@@ -19,9 +22,6 @@ while True:
             else:
                 print("Error: Ingresa un signo válido (+ o -).")
 
-        operacion = int(input("¿Qué operación deseas realizar?\n1. Suma\n2. Resta\n3. Multiplicación\n4. División\n5. Máximo\n6. Mínimo\n7. Promedio\n8. Salir\n"))
-
-        # Ajusta el signo del número según la entrada del usuario
         numero1 = numero1 if signo1 == '+' else -numero1
         numero2 = numero2 if signo2 == '+' else -numero2
 
@@ -49,10 +49,23 @@ while True:
         elif operacion == 7:
             resultado, texto, operacion_str = calculadora.calcular_promedio(numero2)
         elif operacion == 8:
+            resultado =resultado.math.sin(math.radians(numero2))
+            operacion_str = "seno"
+            texto = numero_a_letras(resultado)
+        elif operacion == 9:
+            resultado.math.cos(math.radians(numero1))
+            operacion_str = "coseno"
+            texto = numero_a_letras(resultado)
+        elif operacion == 10:
+            resultado.math.tan(math.radians(numero1))
+            operacion_str = "tangente"
+            texto = numero_a_letras(resultado)
+        elif operacion == 11:
             print("Gracias por usar la calculadora")
-            break
+        break          
         else:
-            print("Error: Ingresa un número válido.")
+        print("Error: Ingresa un número válido.")
+         
 
         print(f"El resultado de la {operacion_str} es: {resultado} y en texto es: {texto}")
 

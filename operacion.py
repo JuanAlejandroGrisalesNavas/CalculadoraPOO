@@ -41,4 +41,5 @@ class CalculadoraNumeroTexto:
         return promedio, texto, "promedio"
 
     def calcular_seno(self, otro_numero):
-        math.sin(otro_numero)
+        resultado = math.sin(otro_numero)
+        return math.sin
