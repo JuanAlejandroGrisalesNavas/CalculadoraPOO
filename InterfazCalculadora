@@ -1,0 +1,130 @@
+import sys
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import uic
+from PyQt5.QtWidgets import QMainWindow, QApplication
+from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QLineEdit
+from PyQt5.uic import*
+from operacion import*
+from convertir import*
+
+
+class Ventana(QMainWindow):
+    def __init__(self):
+        super(Ventana,self).__init__()
+        QMainWindow.__init__(self)
+        uic.loadUi("calculadora.ui",self)
+        self.Button_0.clicked.connect(self.cero)
+        self.Button_1.clicked.connect(self.uno)
+        self.Button_2.clicked.connect(self.dos)
+        self.Button_3.clicked.connect(self.tres)
+        self.Button_4.clicked.connect(self.cuatro)
+        self.Button_5.clicked.connect(self.cinco)
+        self.Button_6.clicked.connect(self.seis)
+        self.Button_7.clicked.connect(self.siete)
+        self.Button_8.clicked.connect(self.ocho)
+        self.Button_9.clicked.connect(self.nueve)
+        self.Button_Atras.clicked.connect(self.atras)
+        self.Button_Cos.clicked.connect(self.cos)
+        self.Button_Dividir.clicked.connect(self.dividir)
+        self.Button_Igual.clicked.connect(self.igual)
+        self.Button_Max.clicked.connect(self.maximo)
+        self.Button_Min.clicked.connect(self.minimo)
+        self.Button_Multiplicar.clicked.connect(self.multiplicar)
+        self.Button_Promedio.clicked.connect(self.promedio)
+        self.Button_Resta.clicked.connect(self.resta)
+        self.Button_Suma.clicked.connect(self.sumar)
+        self.Button_Tan.clicked.connect(self.tan)
+        self.Button_signoMas.clicked.connect(self.signoMas)
+        self.Button_signoMenos.clicked.connect(self.signoMenos)
+
+
+
+
+    def pressButton(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "1")
+
+    def cero(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "0")
+
+    def uno(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "1")
+
+    def dos(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "2")
+
+    def tres(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "3")
+
+    def cuatro(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "4")
+
+    def cinco(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "5")
+
+    def seis(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "6")
+
+    def siete(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "7")
+
+    def ocho(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "8")
+
+    def nueve(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "9")
+
+    def atras(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text()[:-1])
+
+    def cos(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "cos")
+
+    def dividir(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "/")
+
+    def igual(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "=")
+
+    def maximo(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "max")
+
+    def minimo(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "min")
+
+    def multiplicar(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "*")
+
+    def promedio(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "prom")
+
+    def resta(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "-")
+
+    def sumar(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "+")
+
+    def tan(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "tan")
+
+    def signoMas(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "+")
+
+    def signoMenos(self):
+        self.lineEditResultado.setText(self.lineEditResultado.text() + "-")
+
+
+
+
+
+app = QApplication(sys.argv)
+ventana = Ventana()
+lineEditResultado=QtWidgets.QStackedWidget()
+lineEditResultado.addWidget(ventana)
+lineEditResultado.setFixedWidth(400)
+lineEditResultado.setFixedHeight(600)
+lineEditResultado.show()
+
+try:
+    sys.exit(app.exec_())
+except SystemExit:
+    print('Closing Window...')
