@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>437</width>
+    <height>853</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calculator 33?</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(170, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">
+
+background-color: rgb(223, 223, 223);</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(230, 230, 230);</string>
+      </property>
+      <widget class="QWidget" name="Page1" native="true">
+       <attribute name="title">
+        <string/>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item row="5" column="2">
+         <widget class="QPushButton" name="Button_0">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 15pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <widget class="QPushButton" name="Button_Multiplicar">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 8pt &quot;System&quot;;
+	color: rgb(255,255,255);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(255,255,255)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../Users/holan/OneDrive/Escritorio/x.png</normaloff>../../../Users/holan/OneDrive/Escritorio/x.png</iconset>
+          </property>
+          <property name="shortcut">
+           <string>*</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="4">
+         <widget class="QLabel" name="outputNumerico">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>15</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777</width>
+            <height>1677</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Yu Gothic UI Semibold</family>
+            <pointsize>36</pointsize>
+            <weight>7</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 63 36pt &quot;Yu Gothic UI Semibold&quot;;
+background-color: rgb(170, 255, 255);
+color: rgb(0, 0, 0)
+</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QPushButton" name="Button_Dividir">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 8pt &quot;System&quot;;
+	color: rgb(255,255,255);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(255,255,255)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../Users/holan/OneDrive/Escritorio/dividir.png</normaloff>../../../Users/holan/OneDrive/Escritorio/dividir.png</iconset>
+          </property>
+          <property name="shortcut">
+           <string>/</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QPushButton" name="Button_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 15pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>3</string>
+          </property>
+          <property name="shortcut">
+           <string>3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="Button_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 15pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>4</string>
+          </property>
+          <property name="shortcut">
+           <string>4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="2">
+         <widget class="QPushButton" name="Button_Promedio">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 8pt &quot;System&quot;;
+	color: rgb(255,255,255);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(255,255,255)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../Users/holan/OneDrive/Escritorio/kisspng-arithmetic-mean-statistics-symbol-sample-mean-and-normal-distribution-5b57ca3922f746.0912773015324800571432.jpg</normaloff>../../../Users/holan/OneDrive/Escritorio/kisspng-arithmetic-mean-statistics-symbol-sample-mean-and-normal-distribution-5b57ca3922f746.0912773015324800571432.jpg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QPushButton" name="Button_Resta">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 8pt &quot;System&quot;;
+	color: rgb(255,255,255);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(255,255,255)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../Users/holan/OneDrive/Escritorio/boton-menos.png</normaloff>../../../Users/holan/OneDrive/Escritorio/boton-menos.png</iconset>
+          </property>
+          <property name="shortcut">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="Button_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 15pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>2</string>
+          </property>
+          <property name="shortcut">
+           <string>2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QPushButton" name="Button_signoMenos">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 15pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="Button_7">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 15pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>7</string>
+          </property>
+          <property name="shortcut">
+           <string>7</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="Button_Suma">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 8pt &quot;System&quot;;
+	color: rgb(255,255,255);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(255,255,255)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../Users/holan/OneDrive/Escritorio/mas-positivo-suma-simbolo-matematico.png</normaloff>../../../Users/holan/OneDrive/Escritorio/mas-positivo-suma-simbolo-matematico.png</iconset>
+          </property>
+          <property name="shortcut">
+           <string>+</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="Button_1">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 15pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>1</string>
+          </property>
+          <property name="shortcut">
+           <string>1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QPushButton" name="Button_Max">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 10pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>MAX</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QPushButton" name="Button_Seno">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 10pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>SEN</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0" colspan="2">
+         <widget class="QPushButton" name="Button_Atras">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 15pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../Users/holan/OneDrive/Escritorio/flecha.png</normaloff>../../../Users/holan/OneDrive/Escritorio/flecha.png</iconset>
+          </property>
+          <property name="shortcut">
+           <string>Backspace</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QPushButton" name="Button_Cos">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 10pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>COS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QPushButton" name="Button_signoMas">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 15pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>+</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="4">
+         <widget class="QLabel" name="outoutLetras">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>30</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 7pt &quot;System&quot;;
+background-color: rgb(170, 255, 255);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="Button_5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 15pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>5</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="2">
+         <widget class="QPushButton" name="Button_Igual">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 8pt &quot;System&quot;;
+	color: rgb(255,255,255);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(255,255,255)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../Users/holan/OneDrive/Escritorio/signo-matematico-igual.png</normaloff>../../../Users/holan/OneDrive/Escritorio/signo-matematico-igual.png</iconset>
+          </property>
+          <property name="shortcut">
+           <string>=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="Button_6">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 15pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>6</string>
+          </property>
+          <property name="shortcut">
+           <string>6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QPushButton" name="Button_Min">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 10pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>MIN</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="Button_8">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 15pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>8</string>
+          </property>
+          <property name="shortcut">
+           <string>8</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="Button_9">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 15pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}</string>
+          </property>
+          <property name="text">
+           <string>9</string>
+          </property>
+          <property name="shortcut">
+           <string>9</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="2">
+         <widget class="QPushButton" name="Button_Tan">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+            <horstretch>20</horstretch>
+            <verstretch>17</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+font: 75 10pt &quot;Yu Gothic UI Semibold&quot;;
+	color: rgb(0,0,0);
+	background-color: rgb(38, 0, 0);
+border-radius: 30px;
+
+}
+QPushButton{
+background-color: rgba(170,170,170);
+	color:rgb(0,0,0)
+
+}
+QPushButton:hover{
+color: rgb(61, 61, 61);
+	background-color: rgb(238, 238, 238);
+
+}
+</string>
+          </property>
+          <property name="text">
+           <string>TAN</string>
+          </property>
+          <property name="shortcut">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
