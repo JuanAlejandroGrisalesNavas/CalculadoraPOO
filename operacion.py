@@ -5,7 +5,6 @@ class CalculadoraNumeroTexto:
     def __init__(self, numero):
         self.numero = numero
 
-
     def sumar(self, otro_numero):
         resultado = self.numero + otro_numero
         texto = numero_a_letras(resultado)
@@ -15,7 +14,7 @@ class CalculadoraNumeroTexto:
         resultado = self.numero - otro_numero
         texto = numero_a_letras(resultado)
         return resultado, texto, "resta"
-
+    
     def multiplicar(self, otro_numero):
         resultado = self.numero * otro_numero
         texto = numero_a_letras(resultado)
@@ -40,6 +39,3 @@ class CalculadoraNumeroTexto:
         texto = numero_a_letras(promedio)
         return promedio, texto, "promedio"
 
-    def calcular_seno(self, otro_numero):
-        resultado = math.sin(otro_numero)
-        return math.sin
