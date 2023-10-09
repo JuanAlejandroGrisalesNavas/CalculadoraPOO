@@ -1,12 +1,15 @@
-from operacion import *
-from convertir import *
+from operacion import*
+from convertir import*
 
 while True:
     try:
         operacion = int(input("¿Qué operación deseas realizar?\n1. Suma\n2. Resta\n3. Multiplicación\n4. División\n5. Máximo\n6. Mínimo\n7. Promedio\n8. Seno\n9. Coseno\n10. Tangente\n11. Salir\n"))
 
-    
-        numero1 = float(input("Ingresa el primer número: "))
+        if operacion == 11:
+            print("Gracias por usar la calculadora")
+            break
+
+        numero1 = int(input("Ingresa el primer número: "))
         while True:
             signo1 = input("Ingresa el signo del primer número (+ o -): ")
             if signo1 in ['+', '-']:
@@ -14,7 +17,7 @@ while True:
             else:
                 print("Error: Ingresa un signo válido (+ o -).")
 
-        numero2 = float(input("Ingresa el segundo número: "))
+        numero2 = int(input("Ingresa el segundo número: "))
         while True:
             signo2 = input("Ingresa el signo del segundo número (+ o -): ")
             if signo2 in ['+', '-']:
@@ -48,24 +51,17 @@ while True:
             texto = numero_a_letras(resultado)
         elif operacion == 7:
             resultado, texto, operacion_str = calculadora.calcular_promedio(numero2)
-        elif operacion == 8:
-            resultado =resultado.math.sin(math.radians(numero2))
-            operacion_str = "seno"
+        elif operacion in [8, 9, 10]:
+            if operacion == 8:
+                resultado = math.sin(math.radians(numero2))
+                operacion_str = "seno"
+            elif operacion == 9:
+                resultado = math.cos(math.radians(numero2))
+                operacion_str = "coseno"
+            else:
+                resultado = math.tan(math.radians(numero2))
+                operacion_str = "tangente"
             texto = numero_a_letras(resultado)
-        elif operacion == 9:
-            resultado.math.cos(math.radians(numero1))
-            operacion_str = "coseno"
-            texto = numero_a_letras(resultado)
-        elif operacion == 10:
-            resultado.math.tan(math.radians(numero1))
-            operacion_str = "tangente"
-            texto = numero_a_letras(resultado)
-        elif operacion == 11:
-            print("Gracias por usar la calculadora")
-        break          
-        else:
-        print("Error: Ingresa un número válido.")
-         
 
         print(f"El resultado de la {operacion_str} es: {resultado} y en texto es: {texto}")
 
@@ -78,4 +74,3 @@ while True:
         break
     except Exception as e:
         print("Error:", e)
-        
